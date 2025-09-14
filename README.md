@@ -1,69 +1,113 @@
-# React + TypeScript + Vite
+# React Virtual Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A professional showcase of scalable and non-scalable user list implementations in React, demonstrating efficient rendering, infinite scrolling, and performance metrics.**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Overview](#overview)
+- [Features](#features)
+- [Demo](#demo)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Best Practices](#best-practices)
+- [License](#license)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Overview
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+This project demonstrates two approaches for rendering large datasets in React:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Scalable Users** – Implements incremental loading with infinite scroll, optimizing performance and memory usage.
+2. **Non-Scalable Users** – Loads the entire dataset at once, ideal for comparison and benchmarking purposes.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Both implementations feature **user cards**, a **responsive grid layout**, and display **load time metrics** for performance insight.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Features
+
+- Incremental fetching with infinite scroll (scalable page)
+- Full dataset rendering (non-scalable page)
+- Responsive grid layout with 4–6 cards per row
+- Real-time **load time measurement** for API calls and page fetches
+- Production-ready CSS styling
+- DRY and reusable code architecture
+- TypeScript for type safety and maintainability
+
+---
+
+## Demo
+
+> Placeholder for screenshots or GIFs:
+> - <img width="2009" height="1109" alt="image" src="https://github.com/user-attachments/assets/09717a8a-d8e2-432a-8321-d6dbd55f989b" />
+
+> - <img width="2013" height="1112" alt="image" src="https://github.com/user-attachments/assets/7eaf551a-ef7e-4028-8133-ebc717d008a9" />
+
+
+---
+
+## Installation
+
+1. Clone the repository:
+git clone https://github.com/UNAjay/VirtualGrid-scalable.git
+
+2. Install dependencies:
+npm install
+
+3. Start the development server:
+npm run dev
+
+4. Open your browser at(might vary):
+http://localhost:5173/
+
+## Project Structure
+react-virtual-demo/
+│
+├── src/
+│   ├── api/           # API calls and TypeScript types
+│   ├── components/    # UserCard component
+│   ├── hooks/         # Custom hooks (useUsers)
+│   ├── pages/         # Scalable.tsx & NonScalable.tsx
+│   └── styles/        # CSS files for layout and styling
+│
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+└── README.md
+
+## Technologies Used
+
+React 19 – Functional components with hooks
+
+TypeScript – Type safety and maintainability
+
+Vite – Lightning-fast development and build tool
+
+CSS Grid – Responsive multi-column layout
+
+Fetch API – Mock user data fetching
+
+ESLint – Linting and code quality enforcement
+
+## Best Practices
+
+Modular and DRY architecture
+
+Incremental data fetching for scalable pages
+
+CSS separated into reusable files; no inline styles
+
+Load time monitoring for performance insights
+
+ESLint configured for TypeScript and React hooks
+
+Responsive design for professional production-ready UI
+
+## License
+
+MIT License © 2025 Ajay U N
